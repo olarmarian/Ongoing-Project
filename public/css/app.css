@@ -10669,6 +10669,7 @@ nav {
   display: grid;
   grid-template-columns: 45% 45%;
   grid-column-gap: 100px;
+  margin-left: 150px;
 }
 
 .user > div > h3,
@@ -10703,7 +10704,6 @@ a {
 }
 
 .wrapper > .user {
-  margin-left: 150px;
   background-color: #9e673a;
   height: 650px;
   background: rgba(158, 103, 58, 0.8);

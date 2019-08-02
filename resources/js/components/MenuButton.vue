@@ -1,15 +1,27 @@
 <template>
     <div>
         <button class="menu-btn btn text-dark btn-lg" data-toggle="modal" data-target="#exampleModal">Meniu</button>
-        <modal></modal>
+        <modal :menu="menu"></modal>
     </div>
 </template>
 <script>
 import ModalMenu from './ModalMenu.vue';
 export default {
+    name:"MenuButton",
+    props:['menu'],
+    data(){
+        return{
+            menu: this.menu
+        }
+    },
+    methods:{
+        submit:function(){
+            this.$emit("menu",this.menu)
+        }
+    },
     components:{
         'modal':ModalMenu
-    }    
+    }
 }
 </script>
 <style>

@@ -10,7 +10,7 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            ceva fain
+                            <textarea name="menu" id="menu" cols="50" rows="10" v-model="menu" readonly></textarea>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Iesi</button>
@@ -23,7 +23,12 @@
 
 <script>
 export default {
-
+    props: ['menu'],
+    data(){
+        return {
+            menu: ''
+        }
+    }
 }
 </script>
 

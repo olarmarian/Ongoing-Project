@@ -6,7 +6,7 @@
             @csrf
             @method('PATCH')
     
-            <div class="col-8 offset-2">
+            <div class="col-8 offset-2 pt-4">
                 <div><h1>Modifica Profilul</h1></div>
                 <div class="form-group row">
                     <label for="title" class="col-md-4 col-form-label">Nume</label>
@@ -45,7 +45,7 @@
                 </div>
     
                 <div class="form-group row">
-                    <label for="url" class="col-md-4 col-form-label">Email</label>
+                    <label for="email" class="col-md-4 col-form-label">Email</label>
     
                     <input id="email"
                             type="text"
@@ -61,6 +61,24 @@
                     @endif
     
                 </div>
+
+                <div class="form-group row">
+                        <label for="menu" class="col-md-4 col-form-label">Meniu</label>
+        
+                        <textarea id="menu"
+                                type="text"
+                                class="form-control{{ $errors->has('menu') ? 'is-invalid' : '' }}" 
+                                name="menu"
+                                rows="20"
+                                value="{{ $user->profile->menu }}" 
+                                required autocomplete="menu" autofocus></textarea>
+        
+                        @if ($errors->has('menu'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('menu') }}</strong>
+                            </span>
+                        @endif
+                </div>
     
                 <div class="row">
                 <label for="image" class="col-md-4 col-form-label">Imaginea Profilului</label>
@@ -73,7 +91,7 @@
     
                 </div>
                 <div class="row pt-4">
-                    <button class="btn btn-primary">Save Profile</button>
+                    <button class="btn btn-primary">Salveaza Profil</button>
     
                 </div>
             </div>

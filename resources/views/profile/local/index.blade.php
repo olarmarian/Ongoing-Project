@@ -24,12 +24,15 @@
                     <p class="email text-dark font-italic">Email: {{$user->profile->email ?? 'N/A'}}</p>
                 </div>
                 <div class="d-flex justify-content-center">
-                        <menu-button></menu-button>
-                    </div>
+                    <menu-button menu="{{$user->profile->menu}}"></menu-button>
+                </div>
             </div>
         </div>
         <div class="row">
 
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button class="btn btn-primary" disabled="disabled">Publica localul</button>
         </div>
     </div>
     <footer>

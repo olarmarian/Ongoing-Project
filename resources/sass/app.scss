@@ -17,6 +17,7 @@ nav{
     display: grid;
     grid-template-columns: 45% 45% ;
     grid-column-gap: 100px;
+    margin-left: 150px;
 }
 
 .user > div > h3 , .entrepreneur > div > h3{
@@ -44,7 +45,6 @@ a{
     border: .1em color(black) solid;
 }
 .wrapper > .user{
-    margin-left: 150px;
     background-color:color(user-profile);
     height: 650px;
     background: rgba(158, 103, 58, 0.8);

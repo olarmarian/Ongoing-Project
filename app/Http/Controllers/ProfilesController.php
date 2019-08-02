@@ -15,7 +15,7 @@ class ProfilesController extends Controller
 
     public function index($id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         return view('profile.local.index', compact('user'));
     }
 
@@ -33,10 +33,10 @@ class ProfilesController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required',
+            'menu' => 'required',
             'image' => '',
             ]
         );
-        
         if(request('image')){
             $imagePath = request('image')->store('profile','public');
             $image = Image::make(public_path("storage/{$imagePath}"))->fit(400,300);
@@ -48,7 +48,6 @@ class ProfilesController extends Controller
             $data,
             $imageArray ?? []
         ));
-
         return redirect("/profile/local/{$user->id}");
     }
 }
