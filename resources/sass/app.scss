@@ -1,0 +1,93 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+nav{
+    background-color: color(beige);
+    border: 1px color(black) solid;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 45% 45% ;
+    grid-column-gap: 100px;
+}
+
+.user > div > h3 , .entrepreneur > div > h3{
+    text-align: center;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    display: block;
+    color: color(black);
+}
+
+.user > div > h1 , .entrepreneur > div > h1{
+    font-weight: bold;
+    margin: 30px;
+    color: color(black);
+}
+
+.user > div> p , .entrepreneur > div > p{
+    font-style: italic;
+    color: color(black);
+}
+a{
+    text-decoration: none !important;
+}
+.wrapper .user > a:hover, .wrapper .entrepreneur > a:hover{
+    border: .1em color(black) solid;
+}
+.wrapper > .user{
+    margin-left: 150px;
+    background-color:color(user-profile);
+    height: 650px;
+    background: rgba(158, 103, 58, 0.8);
+}
+
+
+.wrapper > .entrepreneur{
+    background-color:color(entrepreneur-profile);
+    height: 650px;
+    background: rgba(150, 82, 77, 0.8);
+}
+
+footer{
+    background-color: color(beige);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+.follow i{
+    padding-right: 20px;
+    font-size: 25px !important;
+}
+
+.policy{
+    position: absolute;
+    padding-left: 20px;
+    right: 12px;
+    bottom: 2px;
+}
+.policy span{
+    display: block;
+}
+
+.home-div{
+    background-image: url('https://stmed.net/sites/default/files/meal-wallpapers-28271-3298732.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    height: 100%;
+    width: 100%;   
+}
+
