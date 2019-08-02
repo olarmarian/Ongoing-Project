@@ -70,8 +70,8 @@
                                 class="form-control{{ $errors->has('menu') ? 'is-invalid' : '' }}" 
                                 name="menu"
                                 rows="20"
-                                value="{{ $user->profile->menu }}" 
-                                required autocomplete="menu" autofocus></textarea>
+                                value="{{ old('menu') ?? $user->profile->menu }}" 
+                                required autocomplete="menu" autofocus>{{$user->profile->menu}}</textarea>
         
                         @if ($errors->has('menu'))
                             <span class="invalid-feedback" role="alert">
