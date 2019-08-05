@@ -56,6 +56,9 @@ class ProfilesController extends Controller
 
     public function show(){
         $profiles = Profile::all();
-        return view('profile.show',compact('profiles'));
+        $published_profiles = $profiles->filter(function($item){
+            return $item->published;
+        })->values();
+        return view('profile.show',compact('published_profiles'));
     }
 }
