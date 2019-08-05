@@ -19,7 +19,6 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('play-vue', require('./components/PlayVue.vue').default);
 Vue.component('home-card', require('./components/HomeCard.vue').default);
 Vue.component('menu-button', require('./components/MenuButton.vue').default);
 Vue.component('modal', require('./components/ModalMenu.vue').default);

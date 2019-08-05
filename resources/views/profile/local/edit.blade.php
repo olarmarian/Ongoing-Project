@@ -63,6 +63,42 @@
                 </div>
 
                 <div class="form-group row">
+                    <label for="email" class="col-md-4 col-form-label">Locatie</label>
+    
+                    <input id="location"
+                            type="text"
+                            class="form-control{{ $errors->has('location') ? 'is-invalid' : '' }}" 
+                            name="location"
+                            value="{{ old('location') ?? $user->profile->location }}" 
+                            required autocomplete="location" autofocus>
+    
+                    @if ($errors->has('email'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('location') }}</strong>
+                        </span>
+                    @endif
+    
+                </div>
+
+                <div class="form-group row">
+                    <label for="specific" class="col-md-4 col-form-label">Specific</label>
+    
+                    <input id="email"
+                            type="text"
+                            class="form-control{{ $errors->has('specific') ? 'is-invalid' : '' }}" 
+                            name="specific"
+                            value="{{ old('specific') ?? $user->profile->specific }}" 
+                            required autocomplete="specific" autofocus>
+    
+                    @if ($errors->has('specific'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('specific') }}</strong>
+                        </span>
+                    @endif
+    
+                </div>
+
+                <div class="form-group row">
                         <label for="menu" class="col-md-4 col-form-label">Meniu</label>
         
                         <textarea id="menu"

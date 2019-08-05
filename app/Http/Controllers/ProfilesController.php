@@ -33,6 +33,8 @@ class ProfilesController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required',
+            'specific' => 'required',
+            'location' => 'required',
             'menu' => 'required',
             'image' => '',
             ]

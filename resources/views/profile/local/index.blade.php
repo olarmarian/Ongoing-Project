@@ -20,8 +20,10 @@
                     @endcan
                 </div>
                 <div class="mt-5" style="background-color:#d9b38c">
+                    <p class="specific text-dark font-italic">Specific: {{$user->profile->specific ?? 'N/A'}}</p>
                     <p class="phone text-dark font-italic">Telefon: {{$user->profile->phone ?? 'N/A'}}</p>
                     <p class="email text-dark font-italic">Email: {{$user->profile->email ?? 'N/A'}}</p>
+                    <p class="location text-dark font-italic">Locatie: {{$user->profile->location ?? 'N/A'}}</p>
                 </div>
                 <div class="d-flex justify-content-center">
                     <menu-button menu="{{$user->profile->menu}}"></menu-button>
