@@ -25,8 +25,9 @@
                     <p class="email text-dark font-italic">Email: {{$user->profile->email ?? 'N/A'}}</p>
                     <p class="location text-dark font-italic">Locatie: {{$user->profile->location ?? 'N/A'}}</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <menu-button menu="{{$user->profile->menu}}"></menu-button>
+                <div class="d-block justify-content-center">
+                    <menu-button menu="{{$user->profile->menu}}" class="m-1"></menu-button>
+                    <publish-button class="m-1"></publish-button>
                 </div>
             </div>
         </div>
@@ -34,7 +35,7 @@
 
         </div>
         <div class="row d-flex justify-content-center">
-            <button class="btn btn-primary" disabled="disabled">Publica localul</button>
+            
         </div>
     </div>
     <footer>

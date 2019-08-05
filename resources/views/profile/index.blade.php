@@ -3,7 +3,7 @@
 @section('content')
 <div class="home-div" style="">
     <div class="wrapper">
-        <a href="/" class="user">
+        <a href="/locals" class="user">
             <div >
                 <h3>Sunt client</h3>
                 <h1 class="pl-5 text-center">Caut un local pentru mine si prietenii mei</h1>

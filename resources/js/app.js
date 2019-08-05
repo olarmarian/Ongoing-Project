@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('home-card', require('./components/HomeCard.vue').default);
 Vue.component('menu-button', require('./components/MenuButton.vue').default);
+Vue.component('publish-button', require('./components/PublishButton.vue').default);
 Vue.component('modal', require('./components/ModalMenu.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to

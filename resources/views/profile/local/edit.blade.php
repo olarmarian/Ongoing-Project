@@ -128,7 +128,6 @@
                 </div>
                 <div class="row pt-4">
                     <button class="btn btn-primary">Salveaza Profil</button>
-    
                 </div>
             </div>
         </form>

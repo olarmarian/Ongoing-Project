@@ -14,11 +14,11 @@
 
 Auth::routes();
 
-
+Route::get('/locals', 'ProfilesController@show')->name('profile.show');
 Route::get('/home/{user}', 'HomeController@index')->name('home');
-Route::get('/profile/local/{user}', 'ProfilesController@index')->name('profile.show');
+Route::get('/profile/local/{user}', 'ProfilesController@index')->name('profile.index');
 Route::get('/profile/local/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
-Route::patch('/profile/local/{user}', 'ProfilesController@update')->name('profile.edit');
+Route::patch('/profile/local/{user}', 'ProfilesController@update')->name('profile.update');
 
 Route::get('/', function () 
 {

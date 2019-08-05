@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use App\User;
+use App\Profile;
 
 class ProfilesController extends Controller
 {
@@ -51,5 +52,10 @@ class ProfilesController extends Controller
             $imageArray ?? []
         ));
         return redirect("/profile/local/{$user->id}");
+    }
+
+    public function show(){
+        $profiles = Profile::all();
+        return view('profile.show',compact('profiles'));
     }
 }
